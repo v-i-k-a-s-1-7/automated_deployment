@@ -9,5 +9,10 @@ pipeline {
 
       }
     }
+    stage('look fir files'){
+     steps{
+	sh' cd automated_deployment && ls -l'
   }
+}
+}
 }

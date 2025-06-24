@@ -17,6 +17,10 @@ pipeline {
 	sh 'sudo systemctl status apache2'
       }
     }
+    stage('Replace default page'){
+	steps{
+	sh'pwd'
   }
 }
-
+}
+}

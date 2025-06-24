@@ -1,18 +1,19 @@
 pipeline {
   agent any
 
-
   stages {
-    stage('Deploy index.html from GitHub') {
+    stage('Checkout Repo') {
       steps {
-       	sh 'git clone https://github.com/v-i-k-a-s-1-7/automated_deployment.git'
-
+        // This pulls the Jenkinsfile's GitHub repo into the workspace
+        checkout scm
       }
     }
-    stage('look fir files'){
-     steps{
-	sh' cd automated_deployment && ls -l'
+
+    stage('Look for files') {
+      steps {
+        sh 'cd automated_deplyment && ls -l'
+      }
+    }
   }
 }
-}
-}
+

@@ -11,10 +11,7 @@ pipeline {
 
     stage('Install Apache') {
       steps {
-        sh 'sudo apt update'
-	sh 'sudo apt install apache2 -y'
-	sh 'sudo ufw allow "Apache"'
-	sh 'sudo systemctl status apache2'
+        sh 'whomai'
       }
     }
   }

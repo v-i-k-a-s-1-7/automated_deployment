@@ -11,7 +11,7 @@ pipeline {
 
     stage('Install Apache') {
       steps {
-        sh 'whoami'
+        sh 'sudo apt update'
       }
     }
   }

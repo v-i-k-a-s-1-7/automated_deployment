@@ -20,7 +20,7 @@ pipeline {
     stage('Replace default page'){
 	steps{
 	sh'cd automated_deployment && sudo cp index.html /var/www/html/index.html'
-	sh 'sudo systemctl restart jenkins'
+	sh 'sudo systemctl restart apache2'
   }
 }
 }

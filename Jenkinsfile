@@ -9,9 +9,12 @@ pipeline {
       }
     }
 
-    stage('Look for files') {
+    stage('Install Apache') {
       steps {
-        sh 'cd automated_deployment && ls -l'
+        sh 'sudo apt update'
+	sh 'sudo apt install apache2 -y'
+	sh 'sudo ufw allow "Apache"'
+	sh 'sudo systemctl status apache2'
       }
     }
   }

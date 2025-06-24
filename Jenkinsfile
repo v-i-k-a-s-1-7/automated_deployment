@@ -11,7 +11,7 @@ pipeline {
 
     stage('Look for files') {
       steps {
-        sh 'cd automated_deplyment && ls -l'
+        sh 'cd automated_deployment && ls -l'
       }
     }
   }

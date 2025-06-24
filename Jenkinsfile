@@ -19,7 +19,8 @@ pipeline {
     }
     stage('Replace default page'){
 	steps{
-	sh'cd automated_deployment && pwd'
+	sh'cd automated_deployment && cp index.html /var/www/html/index.html'
+	sh 'sudo systemctl restart jenkins'
   }
 }
 }

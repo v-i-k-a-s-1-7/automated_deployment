@@ -19,7 +19,7 @@ pipeline {
     }
     stage('Replace default page'){
 	steps{
-	sh'pwd'
+	sh'cd automated_deployment && pwd'
   }
 }
 }
